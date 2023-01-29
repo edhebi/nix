@@ -12,7 +12,7 @@ stdenv.mkDerivation {
 	};
 
 	# so, it turns out I'm too lazy to parse the js/css files.
-	main = {
+	passthru.main = {
 		base = "#191724";
 		surface = "#1f1d2e";
 		overlay = "#26233a";
@@ -29,7 +29,7 @@ stdenv.mkDerivation {
 		highlight.med = "#403d52";
 		highlight.high = "#524f67";
 	};
-	moon = {
+	passthru.moon = {
 		base = "#232136";
 		surface = "#2a273f";
 		overlay = "#393552";
@@ -46,7 +46,7 @@ stdenv.mkDerivation {
 		highlight.med = "#44415a";
 		highlight.high = "#56526e";
 	};
-	dawn = {
+	passthru.dawn = {
 		base = "#faf4ed";
 		surface = "#fffaf3";
 		overlay = "#f2e9e1";

@@ -43,6 +43,8 @@
 		};
 	};
 
+	programs.ssh.enable = true;
+
 	programs.kitty = {
 		enable = true;
 		font = { name = "JetBrains Mono"; size = 12; };
