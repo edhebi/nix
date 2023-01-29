@@ -40,6 +40,11 @@
 		extraConfig = {
 			user.name = "Edhebi";
 			user.email = "19776499+edhebi@users.noreply.github.com";
+			push.autoSetupRemote = true;
+		};
+
+		aliases = {
+			recommit = "commit --amend --no-edit";
 		};
 	};
 
