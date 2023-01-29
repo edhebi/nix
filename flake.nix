@@ -18,7 +18,7 @@
 		eachSystem = nixpkgs.lib.genAttrs systems;
 	in {
 		packages = eachSystem (system: import ./pkgs {
-			pkgs = nixpkgs.legacyPackages.${system};
+			pkgs = nixpkgs.legacyPackagnes.${system};
 		});
 		devShells = eachSystem (system: import ./shell.nix {
 			pkgs = nixpkgs.legacyPackages.${system};

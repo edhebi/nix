@@ -12,7 +12,7 @@
 	services.syncthing = {
 		enable = true;
 		tray = {
-			enable = true;
+			# enable = true;
 			package = pkgs.qsyncthingtray;
 			command = "qsyncthingtray";
 		};

@@ -16,6 +16,7 @@
 			
 			"files.insertFinalNewline" = true;
 			"editor.insertSpaces" = false;
+			"editor.fontLigatures" = true;
 		};
 	};
 	home.file.".vscode/extensions/extensions.json".text = let

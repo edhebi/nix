@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ pkgs, lib, config, ... }:
 
 let
 	mod = "Mod4";
@@ -36,12 +36,13 @@ in {
 				"${mod}+Control+Shift+Right" = "move container to workspace next; workspace next";
 
 				"${mod}+Shift+q" = "kill";
-				"${mod}+q" = "exec i3-nagbar -t warning -m 'Do you want to exit i3?' -b 'Yes' 'i3-msg exit'";
-
+				
+				"${mod}+l" = "exec loginctl lock-session";
 				"${mod}+Return" = "exec ${pkgs.kitty}/bin/kitty";
-				"${mod}+space" = "exec ${pkgs.dmenu}/bin/dmenu_run";
+				"${mod}+space" = "exec ${pkgs.rofi}/bin/rofi -show drun";
 				"${mod}+b" = "exec ${pkgs.firefox-devedition-bin}/bin/firefox-devedition";
 				"${mod}+p" = "exec ${pkgs.keepassxc}/bin/keepassxc";
+				"${mod}+f" = "exec ${pkgs.rofi}/bin/rofi -show filebrowser";
 			};
 
 			bars = [];
