@@ -83,7 +83,7 @@
 
 				menu-0 = [
 					((colored i.bolt colors.rose) // {
-						exec = "${pkgs.systemd}/bin/shutdown";
+						exec = "${pkgs.systemd}/bin/shutdown now";
 					})
 					((colored i.logout colors.gold) // {
 						exec = "${i3}/bin/i3-msg exit";

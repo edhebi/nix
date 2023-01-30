@@ -43,6 +43,8 @@ in {
 				"${mod}+b" = "exec ${pkgs.firefox-devedition-bin}/bin/firefox-devedition";
 				"${mod}+p" = "exec ${pkgs.keepassxc}/bin/keepassxc";
 				"${mod}+f" = "exec ${pkgs.rofi}/bin/rofi -show filebrowser";
+				"${mod}+s" = "exec ${pkgs.flameshot}/bin/flameshot gui";
+				"${mod}+m" = "exec ${pkgs.evolution}/bin/evolution";
 			};
 
 			bars = [];
@@ -57,10 +59,6 @@ in {
 				{
 					command = "systemctl restart --user polybar";
 					always = true;
-					notification = false;
-				}
-				{
-					command = "systemctl restart --user qsyncthing";
 					notification = false;
 				}
 			];

@@ -7,6 +7,10 @@
 		syncthing
 		keepassxc
 		droidcam
+		flameshot
+		librsvg
+		guff
+		evolution
 	];
 
 	services.syncthing = {

@@ -1,6 +1,13 @@
 { config, pkgs, ... }:
 
 {
+	home.packages = with pkgs; [
+		file
+		nodejs
+		corepack-shims
+		google-chrome-dev
+	];
+
 	programs.vscode = {
 		enable = true;
 		extensions = with pkgs.vscode-extensions; [
@@ -61,4 +68,6 @@
 			confirm_os_window_close = -2;
 		};
 	};
+
+	
 }
