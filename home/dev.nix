@@ -12,7 +12,9 @@
 		enable = true;
 		extensions = with pkgs.vscode-extensions; [
 			bbenoist.nix
+			bbenoist.qml
 			mvllow.rose-pine
+			brunnerh.insert-unicode
 		];
 		mutableExtensionsDir = true;
 		userSettings = {
