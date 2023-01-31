@@ -62,7 +62,7 @@
 			};
 			"module/i3" = {
 				type = "internal/i3";
-				format.prefix = colored i.device-desktop colors.pine;
+				format.prefix = colored i.device-desktop colors.iris;
 				label.focused.font = 2;
 				label.unfocused.foreground = colors.muted;
 			};
@@ -78,12 +78,15 @@
 
 				format = "<menu><label-toggle>";
 				label.open = colored i.power colors.rose;
-				label.close = colored " ${i.power}" colors.muted;
+				label.close = colored " ${i.x}" colors.muted;
 				label.separator = " ";
 
 				menu-0 = [
-					((colored i.bolt colors.rose) // {
+					((colored i.power colors.love) // {
 						exec = "${pkgs.systemd}/bin/shutdown now";
+					})
+					((colored i.reload colors.rose) // {
+						exec = "${pkgs.systemd}/bin/reboot";
 					})
 					((colored i.logout colors.gold) // {
 						exec = "${i3}/bin/i3-msg exit";
