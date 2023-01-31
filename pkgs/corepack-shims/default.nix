@@ -1,6 +1,6 @@
-{ pkgs, stdenv, fetchFromGitHub, ... }:
+{ pkgs, stdenv, ... }:
 
-stdenv.mkDerivation rec {
+stdenv.mkDerivation {
 	name = "corepack-shims";
 	buildInputs = [ pkgs.nodejs ];
 	phases = [ "installPhase" ];
