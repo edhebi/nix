@@ -5,6 +5,7 @@
 		firefox-devedition-bin
 		kitty
 		i3-rounded
+		pipewire
 	];
 
 	fonts = {
@@ -34,5 +35,14 @@
 		
 		desktopManager.xfce.enable = true;
 		desktopManager.xterm.enable = false;
+	};
+
+	programs.droidcam.enable = true;
+	security.rtkit.enable = true;
+	services.pipewire = {
+		enable = true;
+		alsa.enable = true;
+		alsa.support32Bit = true;
+		pulse.enable = true;
 	};
 }

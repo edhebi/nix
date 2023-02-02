@@ -6,6 +6,7 @@
 		nodejs
 		corepack-shims
 		google-chrome-dev
+		git-filter-repo
 	];
 
 	programs.vscode = {
@@ -31,7 +32,7 @@
 	};
 
 	/* See https://github.com/nix-community/home-manager/issues/3507 */
-	programs.vscode.mutableExtensionsDir = false;
+	programs.vscode.mutableExtensionsDir = true;
 	home.file.".vscode/extensions/extensions.json".text =
 		pkgs.vscode-utils.toExtensionJson config.programs.vscode.extensions;
 
@@ -43,6 +44,7 @@
 			user.name = "Edhebi";
 			user.email = "19776499+edhebi@users.noreply.github.com";
 			push.autoSetupRemote = true;
+			url."ssh://git@".insteadOf = "https://";
 		};
 
 		aliases = {

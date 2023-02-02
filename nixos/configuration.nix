@@ -42,8 +42,6 @@
 
 	programs.ssh.startAgent = true;
 
-	hardware.pulseaudio.enable = true;
-
 	users.users.me = {
 		isNormalUser = true;
 		shell = pkgs.zsh;

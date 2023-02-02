@@ -3,14 +3,15 @@
 {
 	home.packages = with pkgs; [
 		discord
+		droidcam
+		evolution
+		flameshot
+		guff
+		keepassxc
+		librsvg
+		pavucontrol
 		spotify
 		syncthing
-		keepassxc
-		droidcam
-		flameshot
-		librsvg
-		guff
-		evolution
 	];
 
 	services.syncthing = {
