@@ -10,18 +10,10 @@
 		keepassxc
 		librsvg
 		pavucontrol
+		slack
 		spotify
-		syncthing
 	];
-
-	services.syncthing = {
-		enable = true;
-		tray = {
-			# enable = true;
-			package = pkgs.qsyncthingtray;
-			command = "qsyncthingtray";
-		};
-	};
 
 	services.pasystray.enable = true;
 }
+ 

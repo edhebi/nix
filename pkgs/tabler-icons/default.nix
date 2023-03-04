@@ -15,7 +15,7 @@ stdenv.mkDerivation rec {
 		owner = "tabler";
 		repo = "tabler-icons";
 		rev = "v${version}";
-		sha256 = "sha256-wJMNG45EVA8dh7osLQTn4MJTiYEdcct6ghjaALr+Iuc=";
+		hash = "sha256-wJMNG45EVA8dh7osLQTn4MJTiYEdcct6ghjaALr+Iuc=";
 	};
 
 	installPhase = let

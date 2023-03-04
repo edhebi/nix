@@ -7,10 +7,6 @@
 		./x.nix
 	];
 
-	environment.systemPackages = with pkgs; [
-		unzip
-	];
-
 	nixpkgs = {
 		overlays = [
 			outputs.overlays.additions

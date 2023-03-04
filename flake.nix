@@ -20,6 +20,7 @@
 		packages = eachSystem (system: import ./pkgs {
 			pkgs = nixpkgs.legacyPackages.${system};
 		});
+
 		devShells = eachSystem (system: import ./shell.nix {
 			pkgs = nixpkgs.legacyPackages.${system};
 		});
@@ -29,7 +30,7 @@
 		homeManagerModules = import ./modules/home-manager;
 
 		nixosConfigurations = {
-			wrex = inputs.nixpkgs.lib.nixosSystem {
+			wrex = nixpkgs.lib.nixosSystem {
  				specialArgs = { inherit inputs outputs; };
 				modules = [ ./nixos/configuration.nix ];
 			};

@@ -8,7 +8,7 @@ stdenv.mkDerivation {
 		owner = "rose-pine";
 		repo = "palette";
 		rev = "59b3d7a1f55ba0a27f96caf28dc2ac62e8a610e0";
-		sha256 = "1nf895jf7dbrxarvdp3q6hj9p7jgyx8m43snac6rnn7vcmyar3za";
+		hash = "unused";
 	};
 
 	# so, it turns out I'm too lazy to parse the js/css files.

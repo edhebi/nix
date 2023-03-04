@@ -2,11 +2,13 @@
 
 {
 	home.packages = with pkgs; [
-		file
-		nodejs
 		corepack-shims
-		google-chrome-dev
+		deno
+		file
 		git-filter-repo
+		google-chrome-dev
+		jq
+		nodejs
 	];
 
 	programs.vscode = {
@@ -14,20 +16,42 @@
 		extensions = with pkgs.vscode-extensions; [
 			bbenoist.nix
 			bbenoist.qml
-			mvllow.rose-pine
+			boukichi.git-exclude
 			brunnerh.insert-unicode
+			denoland.vscode-deno
+			marvhen.reflow-markdown
+			mvllow.rose-pine
+			# sainnhe.everforest
+			valentjn.vscode-ltex
 		];
 		userSettings = {
 			"window.menuBarVisibility" = "toggle";
 
+			#"workbench.colorTheme" = "Everforest Light";
+			#"everforest.highContrast" = true;
+			#"everforest.lightWorkbench" = "high-contrast";
+			#"everforest.lightContrast" = "medium";
 			"workbench.colorTheme" = "Rosé Pine Dawn";
 			"workbench.iconTheme" = "rose-pine-icons";
-			
-			"files.insertFinalNewline" = true;
-			"editor.insertSpaces" = false;
 			"editor.fontLigatures" = true;
 
+			"files.insertFinalNewline" = true;
+			"editor.insertSpaces" = false;
+			"editor.useTabStops" = true;
+			"editor.stickyTabStops" = true;
+
+			"editor.unicodeHighlight.ambiguousCharacters" = false;
+			"editor.unicodeHighlight.invisibleCharacters" = false;
+		} // {
+			"ltex.additionalRules.enablePickyRules" = true;
+			"ltex.additionalRules.motherTongue" = "fr";
+
 			"files.associations"."*.md.html" = "markdown";
+			"[markdown]" = {
+				"editor.rulers" = [ 80 ];
+				"editor.insertSpaces" = true;
+				"editor.tabSize" = 4;
+			};
 		};
 	};
 
@@ -63,5 +87,18 @@
 			enable_audio_bell = false;
 			confirm_os_window_close = -2;
 		};
+	};
+
+	programs.bat = {
+		enable = true;
+		config = {
+			map-syntax = [ "*.md.html:Markdown" ];
+			theme = "GitHub";
+		};
+		extraPackages = with pkgs.bat-extras; [ batman batgrep ];
+	};
+
+	programs.exa = {
+		enable = true;
 	};
 }

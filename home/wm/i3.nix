@@ -36,6 +36,7 @@ in {
 				"${mod}+Control+Shift+Right" = "move container to workspace next; workspace next";
 
 				"${mod}+Shift+q" = "kill";
+				"${mod}+Shift+space" = "layout toggle splith splitv stacking tabbed";
 				
 				"${mod}+l" = "exec loginctl lock-session";
 				"${mod}+Return" = "exec ${pkgs.kitty}/bin/kitty";
@@ -44,7 +45,6 @@ in {
 				"${mod}+p" = "exec ${pkgs.keepassxc}/bin/keepassxc";
 				"${mod}+f" = "exec ${pkgs.rofi}/bin/rofi -show filebrowser";
 				"${mod}+s" = "exec ${pkgs.flameshot}/bin/flameshot gui";
-				"${mod}+m" = "exec ${pkgs.evolution}/bin/evolution";
 			};
 
 			bars = [];
